@@ -1,2 +1,2 @@
 # RealEstate
-Real Estate PWA
+Real Estate PWA, created with Ionic -> Angular
