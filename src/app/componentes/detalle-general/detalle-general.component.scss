@@ -1,0 +1,19 @@
+.like-button{
+
+    --background:transparent;
+    --color-hover: red;
+    --background-activated: red;
+    --background-focused: red;
+    --box-shadow:none;
+    margin-top:15px;
+}
+
+.close-button{
+
+    --background:transparent;
+    --color-hover: black;
+    --background-activated: none;
+    --background-focused:none;
+    --box-shadow:none;
+    margin-top:15px;
+}

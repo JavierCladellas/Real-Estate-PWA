@@ -1,0 +1,23 @@
+.filter{
+    position: absolute;
+    max-width:304px;
+    right:0px;
+}
+
+.closing-div{
+    position :absolute;
+    left:0;
+    right:304px;
+    height:100%;
+    overflow:auto;
+}
+
+ion-range::part(pin) {
+    transform: translate3d(0px, -24px, 0px) scale(1);
+  }
+
+ion-button{
+    --background:white;
+    --color:black;
+    --box-shadow:none;
+}

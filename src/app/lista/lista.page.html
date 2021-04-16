@@ -1,0 +1,44 @@
+<ion-header >
+  <ion-toolbar color="light">
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-searchbar placeholder="Dirección, municipio, departamento" show-cancel-button="focus" cancel-button-icon="close"></ion-searchbar>
+    <ion-button color="light" slot="end" (click)=mostrarModalFilters() style="padding-bottom: 10px;">
+      <ion-icon name="funnel-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher pullMax="180" slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText=""
+      refreshingSpinner="circles"
+      refreshingText="">
+    </ion-refresher-content>
+  </ion-refresher>
+
+
+  <ion-list>
+    <ion-item *ngFor = "let info of puntos">
+      <ion-card style="border: 1px solid whitesmoke;" (click)="mostrarModal2(info);">
+
+        <img [src]="info.foto"/>
+
+        <ion-card-header>
+          <ion-card-title>{{info.precio}}</ion-card-title>
+          <ion-card-subtitle>{{info.direccion}}</ion-card-subtitle>
+        </ion-card-header>
+
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

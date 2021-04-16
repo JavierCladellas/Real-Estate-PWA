@@ -1,0 +1,35 @@
+
+<ion-content>
+
+  <ion-fab horizontal="start" vertical="top">
+    <ion-fab-button class="close-button" (click)="cerrar()" size="small" style="margin: 0;"><ion-icon name="close-outline"></ion-icon></ion-fab-button>
+  </ion-fab>
+
+  <ion-fab horizontal="end" vertical="top">
+    <ion-fab-button class="like-button" (click)="like()" size="small" style="margin: 0;"><ion-icon name="heart-outline"></ion-icon></ion-fab-button>
+  </ion-fab>
+
+
+  <img (click)="mostrarModalSlides(todo2)" src={{todo2.foto}} />
+  <div (click)="mostrarModalSlides(todo2)" *ngFor="let foto of todo2.fotos">
+    <img [src]="foto.url" />
+  </div>
+
+
+</ion-content>
+
+
+
+<ion-footer class="info-card-footer" color="light">
+  <ion-card >
+    <ion-card-header (click)="mostrarModalFeaturesText(todo2)">
+      <ion-card-title>{{todo2.precio}}</ion-card-title>
+      <ion-card-subtitle>{{todo2.direccion}}</ion-card-subtitle>
+    </ion-card-header>
+    <div class="contact-buttons-div">
+      <ion-button fill="outline" class="contact-button"> Llamar</ion-button>
+      <ion-button fill="outline" class="contact-button">Mensaje</ion-button>
+      <ion-button color="primary" class="contact-button">Tour</ion-button>
+    </div>
+  </ion-card>
+</ion-footer>

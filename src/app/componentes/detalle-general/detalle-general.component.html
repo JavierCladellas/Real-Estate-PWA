@@ -1,0 +1,40 @@
+<!-- <ion-header >
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-button (click)="cerrar();">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button> 
+    </ion-buttons>
+    <ion-title> {{titulo}} </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<ion-content style="opacity:0;" (click)="cerrar();">
+</ion-content>
+
+<ion-slides *ngIf="viewEntered">
+  <ion-slide>
+    <ion-footer style="opacity:1;">
+
+        <ion-fab horizontal="end" vertical="top">
+          <ion-fab-button class="like-button" (click)="like()" size="small"><ion-icon name="heart-outline"></ion-icon></ion-fab-button>
+        </ion-fab>
+        
+        <ion-card (click)="mostrarModal2();">
+          <img src= {{todo.foto}} alt="Foto de Casa">
+          
+          
+          <ion-card-header>
+            <ion-card-title>{{todo.precio}}</ion-card-title>
+            <ion-card-subtitle>{{todo.direccion}}</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-icon slot="start" name="chevron-forward-circle"></ion-icon>
+            <ion-label>A la venta</ion-label>
+          </ion-card-content>
+
+        </ion-card>
+      
+    </ion-footer>
+  </ion-slide>
+</ion-slides>

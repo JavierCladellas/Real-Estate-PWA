@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar style="--background:black;">
+    <ion-buttons slot="start"> 
+      <ion-button (click)="cerrar();">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="viewEntered">
+  <ion-slides pager="true">
+    <ion-slide >
+      <ion-img src={{allfotos.foto}}></ion-img>
+    </ion-slide>
+    <ion-slide *ngFor="let fo of allfotos.fotos">
+      <ion-img [src]="fo.url"></ion-img>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

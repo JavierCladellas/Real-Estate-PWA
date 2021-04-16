@@ -1,0 +1,127 @@
+<ion-app [class.dark-theme]="dark">
+  <ion-split-pane contentId="main-content">
+
+    <ion-menu swipe-gesture="false" contentId="main-content" >
+      <ion-content class="menu-content" color="light" >
+        <!--- <ion-searchbar id="filter-search-bar" placeholder="Find your dream house"></ion-searchbar> --->
+        
+        <ion-list lines="none">
+          <ion-list-header id="main-title">
+            Real Estate
+          </ion-list-header>
+        </ion-list>
+
+        <ion-list lines="none">
+          <ion-list-header>
+            Cuenta
+          </ion-list-header>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item button detail="false">
+              <ion-icon slot="start" name="person"></ion-icon>
+              <ion-label>
+                Mi Perfil
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle button autoHide="false">
+            <ion-item button detail="false">
+              <ion-icon slot="start" name="log-in"></ion-icon>
+              <ion-label>
+                Iniciar sesión
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+        </ion-list>
+
+        <ion-list lines="none">
+          <ion-list-header>
+            Mis actividades
+          </ion-list-header>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item button detail="false">
+              <ion-icon slot="start" name="home-outline"></ion-icon>
+              <ion-label>
+                Mis propiedades
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item button detail="false">
+              <ion-icon slot="start" name="archive-outline"></ion-icon>
+              <ion-label>
+                Mis Solicitudes
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item button detail="false">
+              <ion-icon slot="start" name="calculator-outline"></ion-icon>
+              <ion-label>
+                Calculadora Ganancias
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item button detail="false">
+              <ion-icon slot="start" name="calculator-outline"></ion-icon>
+              <ion-label>
+                Calculadora Costos
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+        </ion-list>
+
+        <ion-list lines="none">
+          <ion-list-header>
+            Tutorial
+          </ion-list-header>
+          <ion-menu-toggle autoHide="false">
+            <ion-item button detail="false">
+              <ion-icon slot="start" name="hammer"></ion-icon>
+              <ion-label>Mostrar Tutorial</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-item>
+            <ion-icon slot="start" name="moon-outline"></ion-icon>
+            <ion-label>
+              Modo Oscuro
+            </ion-label>
+            <ion-toggle [(ngModel)]="dark"></ion-toggle>
+          </ion-item>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item button detail="false">
+              <ion-icon slot="start" name="help"></ion-icon>
+              <ion-label>
+                Soporte
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item button detail="false">
+              <ion-icon slot="start" name="log-out"></ion-icon>
+              <ion-label>
+                Cerrar sesión
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+
+  </ion-split-pane>
+
+</ion-app>

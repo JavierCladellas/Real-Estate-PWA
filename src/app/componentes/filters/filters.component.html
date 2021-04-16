@@ -1,0 +1,146 @@
+<div class="closing-div" (click)="cerrar()"></div>
+
+<ion-content class="filter">
+  
+  <ion-toolbar color="light">
+    <ion-button color="light" slot="start" (click)="cerrar()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    
+    <ion-title style="text-align: center;">Filtros</ion-title>
+
+    <ion-button color="light" slot="end">
+      Reset
+    </ion-button>
+  </ion-toolbar>
+
+
+    <ion-item lines="none">
+      <ion-label>
+        Se Vende
+      </ion-label>
+      <ion-toggle></ion-toggle>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>
+        Se Renta
+      </ion-label>
+      <ion-toggle></ion-toggle>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>
+        Vendidas Recientemente
+      </ion-label>
+      <ion-toggle></ion-toggle>
+    </ion-item>
+    
+    <br>
+    
+    <ion-item lines="none">
+      <ion-label>Precio</ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-range [value]="{ lower: 0, upper: 2000 }" min="0" max="2000" step="50" pin=true dual-knobs=true></ion-range>
+    </ion-item>
+
+
+    <ion-item lines="none">
+      <ion-label>Tipo de Inmueble</ion-label>
+      <ion-select placeholder="Seleccionar">
+        <ion-select-option>Casa</ion-select-option>
+        <ion-select-option>Apartamento</ion-select-option>
+        <ion-select-option>Lotificación</ion-select-option>
+        <ion-select-option>Familia Compartida</ion-select-option>M
+      </ion-select>
+    </ion-item>
+
+
+    <ion-item lines="none">
+      <ion-label>Habitaciones</ion-label>
+    </ion-item>
+    
+    <ion-item lines="none">
+      <ion-segment scrollable=true>
+          <ion-segment-button>
+            <ion-label>
+              Any
+            </ion-label></ion-segment-button>
+          <ion-segment-button>
+            <ion-label>
+              1
+            </ion-label></ion-segment-button>
+          <ion-segment-button>
+            <ion-label>
+              2
+            </ion-label></ion-segment-button>
+          <ion-segment-button>
+            <ion-label>
+              3
+            </ion-label></ion-segment-button>
+          <ion-segment-button>
+            <ion-label>
+              4
+            </ion-label></ion-segment-button>
+          <ion-segment-button>
+            <ion-label>
+              5+
+            </ion-label></ion-segment-button>
+      </ion-segment>
+    </ion-item>
+
+
+    <ion-item lines="none">
+      <ion-label>Baños</ion-label>
+    </ion-item>
+    
+    <ion-item lines="none">
+      <ion-segment scrollable=true>
+          <ion-segment-button>
+            <ion-label>
+              Any
+            </ion-label></ion-segment-button>
+          <ion-segment-button>
+            <ion-label>
+              1
+            </ion-label></ion-segment-button>
+          <ion-segment-button>
+            <ion-label>
+              2
+            </ion-label></ion-segment-button>
+          <ion-segment-button>
+            <ion-label>
+              3
+            </ion-label></ion-segment-button>
+          <ion-segment-button>
+            <ion-label>
+              4
+            </ion-label></ion-segment-button>
+          <ion-segment-button>
+            <ion-label>
+              5+
+            </ion-label></ion-segment-button>
+      </ion-segment>
+    </ion-item>
+    
+
+    <ion-item lines="none">
+      <ion-label>Año</ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-range  step="10" [value]="{ lower: 1800, upper: 2020 }" min="1800" max="2020" pin=true  dual-knobs=true></ion-range>
+    </ion-item>
+
+    
+    <ion-item lines="none">
+      <ion-label>Palabras Clave</ion-label>
+    </ion-item>
+
+    <ion-item lines="none" style="margin-bottom: 15px;">
+        <ion-input  style="border:groove" placeholder="Jardín, parque, etc."></ion-input>
+    </ion-item>
+
+</ion-content>
